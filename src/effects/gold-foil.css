@@ -1,0 +1,19 @@
+.effect-gold-foil .optcg-card__shine {
+  background: linear-gradient(
+    110deg,
+    #8a702000 0%, #c9a84c33 20%, #e8d48b33 40%,
+    #c9a84c33 60%, #8a702000 80%
+  );
+  background-size: 200% 200%;
+  background-position: var(--pointer-x, 50%) var(--pointer-y, 50%);
+  filter: brightness(0.9) saturate(1.2);
+}
+
+.effect-gold-foil .optcg-card__glare {
+  background: radial-gradient(
+    farthest-corner circle at var(--pointer-x, 50%) var(--pointer-y, 50%),
+    rgba(255, 230, 150, 0.7) 5%,
+    rgba(201, 168, 76, 0.25) 30%,
+    transparent 55%
+  );
+}

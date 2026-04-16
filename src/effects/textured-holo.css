@@ -1,0 +1,29 @@
+.effect-textured-holo .optcg-card__shine {
+  background: repeating-linear-gradient(
+    110deg,
+    #ff6b6b00 0%, #ff6b6b33 3%,
+    #ffd93d00 6%, #ffd93d33 9%,
+    #6bff6b00 12%, #6bff6b33 15%,
+    #6bd4ff00 18%, #6bd4ff33 21%,
+    #d46bff00 24%, #d46bff33 27%,
+    #ff6b6b00 30%
+  );
+  background-size: 200% 200%;
+  background-position: var(--pointer-x, 50%) var(--pointer-y, 50%);
+  filter: brightness(0.9) saturate(1.6);
+}
+
+.effect-textured-holo .optcg-card__glare {
+  background: radial-gradient(
+    farthest-corner circle at var(--pointer-x, 50%) var(--pointer-y, 50%),
+    rgba(255, 255, 255, 0.8) 5%,
+    rgba(255, 255, 255, 0.3) 25%,
+    transparent 55%
+  );
+}
+
+.effect-textured-holo .optcg-card__texture {
+  background-image: url('../textures/grain.webp');
+  background-size: 200px;
+  background-repeat: repeat;
+}

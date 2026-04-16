@@ -1,0 +1,29 @@
+.effect-gold-textured .optcg-card__shine {
+  background: repeating-linear-gradient(
+    110deg,
+    #c9a84c00 0%, #c9a84c33 4%,
+    #ff6b6b00 8%, #ff6b6b22 11%,
+    #ffd93d00 14%, #ffd93d33 18%,
+    #6bff6b00 22%, #6bff6b22 25%,
+    #6bd4ff00 28%, #6bd4ff22 31%,
+    #c9a84c00 35%
+  );
+  background-size: 200% 200%;
+  background-position: var(--pointer-x, 50%) var(--pointer-y, 50%);
+  filter: brightness(0.85) saturate(1.5);
+}
+
+.effect-gold-textured .optcg-card__glare {
+  background: radial-gradient(
+    farthest-corner circle at var(--pointer-x, 50%) var(--pointer-y, 50%),
+    rgba(255, 240, 200, 0.8) 5%,
+    rgba(230, 210, 170, 0.3) 25%,
+    transparent 55%
+  );
+}
+
+.effect-gold-textured .optcg-card__texture {
+  background-image: url('../textures/grain.webp');
+  background-size: 200px;
+  background-repeat: repeat;
+}

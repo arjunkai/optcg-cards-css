@@ -1,0 +1,21 @@
+.effect-border-foil .optcg-card__shine {
+  background: linear-gradient(
+    110deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.08) 45%,
+    rgba(220, 230, 245, 0.06) 55%,
+    transparent 70%
+  );
+  background-size: 200% 200%;
+  background-position: var(--pointer-x, 50%) var(--pointer-y, 50%);
+  filter: brightness(0.7);
+}
+
+.effect-border-foil .optcg-card__glare {
+  background: radial-gradient(
+    farthest-corner circle at var(--pointer-x, 50%) var(--pointer-y, 50%),
+    rgba(255, 255, 255, 0.3) 5%,
+    rgba(255, 255, 255, 0.1) 25%,
+    transparent 50%
+  );
+}

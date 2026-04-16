@@ -1,0 +1,23 @@
+.effect-holo .optcg-card__shine {
+  background: repeating-linear-gradient(
+    110deg,
+    #ff6b6b00 0%, #ff6b6b22 3%,
+    #ffd93d00 6%, #ffd93d22 9%,
+    #6bff6b00 12%, #6bff6b22 15%,
+    #6bd4ff00 18%, #6bd4ff22 21%,
+    #d46bff00 24%, #d46bff22 27%,
+    #ff6b6b00 30%
+  );
+  background-size: 200% 200%;
+  background-position: var(--pointer-x, 50%) var(--pointer-y, 50%);
+  filter: brightness(0.8) saturate(1.4);
+}
+
+.effect-holo .optcg-card__glare {
+  background: radial-gradient(
+    farthest-corner circle at var(--pointer-x, 50%) var(--pointer-y, 50%),
+    rgba(255, 255, 255, 0.7) 5%,
+    rgba(255, 255, 255, 0.25) 25%,
+    transparent 55%
+  );
+}
