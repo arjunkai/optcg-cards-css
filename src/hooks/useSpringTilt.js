@@ -69,7 +69,7 @@ export function useSpringTilt({ maxTilt = 14 } = {}) {
       target.current = { x: 0, y: 0, sheenX: 50, sheenY: 50 };
       spring.current = SPRING_SNAPBACK;
       startAnimating();
-    }, 500);
+    }, 200);
     return () => { clearTimeout(timer); cancelAnimationFrame(animFrame.current); };
   }, []);
 
@@ -103,7 +103,7 @@ export function useSpringTilt({ maxTilt = 14 } = {}) {
       target.current = { x: 0, y: 0, sheenX: 50, sheenY: 50 };
       setIsInteracting(false);
       startAnimating();
-    }, 500);
+    }, 200);
   }, [startAnimating]);
 
   const onTouchStart = useCallback((e) => {
@@ -143,7 +143,7 @@ export function useSpringTilt({ maxTilt = 14 } = {}) {
       target.current = { x: 0, y: 0, sheenX: 50, sheenY: 50 };
       setIsInteracting(false);
       startAnimating();
-    }, 500);
+    }, 200);
   }, [startAnimating]);
 
   return {
