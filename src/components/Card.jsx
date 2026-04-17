@@ -11,7 +11,7 @@ import '../effects/sparkle.css';
 const VALID_EFFECTS = ['holo', 'textured-holo', 'gold-textured', 'border-foil', 'gold-foil', 'sparkle', 'none'];
 
 export default function Card({ image, effect = 'none', name = '', className = '' }) {
-  const { wrapperRef, tiltStyle, sheenPosition, handlers, isInteracting } = useSpringTilt();
+  const { wrapperRef, cardRef, handlers, isInteracting } = useSpringTilt();
 
   const hasEffect = effect !== 'none' && VALID_EFFECTS.includes(effect);
 
@@ -19,16 +19,16 @@ export default function Card({ image, effect = 'none', name = '', className = ''
     <div
       ref={wrapperRef}
       className={`optcg-card-wrapper ${isInteracting ? 'active' : ''} ${className}`}
-      onPointerMove={handlers.onPointerMove}
-      onPointerLeave={handlers.onPointerLeave}
-      onTouchMove={handlers.onTouchMove}
+      style={{ WebkitTouchCallout: 'none' }}
+      {...handlers}
     >
       <div
+        ref={cardRef}
         className={`optcg-card ${hasEffect ? `effect-${effect}` : ''}`}
         style={{
-          ...tiltStyle,
-          '--pointer-x': `${sheenPosition.x}%`,
-          '--pointer-y': `${sheenPosition.y}%`,
+          transform: 'rotateX(-6deg) rotateY(4deg)',
+          transformStyle: 'preserve-3d',
+          willChange: 'transform',
         }}
       >
         <img
